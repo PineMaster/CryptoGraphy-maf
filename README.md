@@ -1,3 +1,4 @@
 # CryptoGraphy-maf
 
-Programs to decrypt different decryptions
+Module to decrypt different decryptions
+In progress, so i cant really help with issues rn
