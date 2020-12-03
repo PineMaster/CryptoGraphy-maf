@@ -58,12 +58,12 @@ a1z26encrypt = {
 "Z": 26,
 }
 def Decrypt(text):
-    text =  list(map(int, str(text))) 
+    text =  list(map(int, str(text).replace("-", "").replace(" ", ""))) 
     text = list(map(lambda x:x-1, text))
     text = ''.join(list(map(lambda x:aiz26.get(x, "undefined"), text)))
     return text
 
 def Encrypt(text):
     text = list(text.upper())
-    text = ''.join(list(map(lambda x:str(a1z26encrypt.get(x, "undefined")), text)))
+    text = '-'.join(list(map(lambda x:str(a1z26encrypt.get(x, "undefined")), text)))
     return text
