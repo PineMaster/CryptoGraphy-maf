@@ -70,10 +70,13 @@ base64table = {
 }
 
 def Encrypt(text):
-    characters = []
+    characters = list(text)
+    characters = map(lambda  x: format(ord(x), '08b'), characters)
     #Convert to binary--------
-    for character in text:
-        characters += [str(format(ord(character),'08b'))]
+                                                                        #for character in text:
+                                                                        #    characters += [str(format(ord(character),'08b'))]
+
+
     #block into blocks of 6, padding etc-------------------
     characters = ''.join(characters)
     characters = textwrap.wrap(characters, 6)
